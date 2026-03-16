@@ -1,5 +1,7 @@
 # Intent Sharpening
 
+[한국어](README.ko.md)
+
 A Claude Code plugin that sharpens vague planning intentions into clear **Intent Cards** through Socratic questioning.
 
 ## How It Works
