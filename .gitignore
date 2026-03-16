@@ -1,0 +1,10 @@
+# skills CLI install artifacts
+.agent/
+.agents/
+.claude/
+.cursor/
+.gemini/
+.github/copilot/
+.goose/
+.antigravity/
+nskills-lock.json

@@ -1,5 +1,5 @@
 ---
-name: sharpen
+name: intent-sharpening
 description: Sharpen vague intentions into clear intent cards through Socratic questioning with a separate Clarity Judge agent.
 ---
 
