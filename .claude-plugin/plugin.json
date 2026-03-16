@@ -1,0 +1,8 @@
+{
+  "name": "intent-sharpening",
+  "version": "1.0.0",
+  "description": "Sharpen vague intentions into clear intent cards through Socratic questioning with a separate Clarity Judge agent.",
+  "author": "Jegwan Oh",
+  "license": "MIT",
+  "keywords": ["planning", "intent", "socratic", "product-management", "clarity"]
+}
