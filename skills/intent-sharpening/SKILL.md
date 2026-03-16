@@ -52,10 +52,16 @@ Raw stone (vague intention) → Socratic dialogue → Sculpture (clear intention
 
 ### Step 0 — Parse Input
 
-`/intent-sharpening:sharpen [intention]` or `/intent-sharpening:sharpen`
+`/intent-sharpening:intent-sharpening [intention]` or `/intent-sharpening:intent-sharpening`
 
 - If an intention is provided, go straight to Step 1
 - If no argument: "What are you planning? Throw me a one-liner."
+
+**Options**:
+- **Max rounds** (default: 20) — The user can set this in any natural form:
+  - `--rounds 5 Build a dashboard`
+  - `Build a dashboard, keep it to 3 rounds`
+  - `Build a dashboard` (uses default: 20)
 
 ### Step 1 — First Sharpening (Round 1)
 
@@ -169,11 +175,11 @@ Round {N+1} — Keep sharpening
 
 Then return to Step 2 (loop).
 
-**Max rounds**: 5. If still below 80 after 5 rounds, force-complete with the current state and explicitly note which axes remain weak.
+**Max rounds**: 20 by default (configurable via `--rounds N`). If still below 80 after max rounds, force-complete with the current state and explicitly note which axes remain weak.
 
 ### Step 4 — Done: Generate Intent Card
 
-Once the score reaches 80+ (or after 5 rounds), generate the final **Intent Card**.
+Once the score reaches 80+ (or after max rounds), generate the final **Intent Card**.
 
 ```
 ✅ Intent Sharpening Complete — {score}/100 ({rounds} rounds)
@@ -193,7 +199,7 @@ Once the score reaches 80+ (or after 5 rounds), generate the final **Intent Card
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-{If below 80 after 5 rounds}
+{If below 80 after max rounds}
 ⚠️ Still weak: {weakest axes} — address these before execution
 ```
 
